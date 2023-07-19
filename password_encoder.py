@@ -13,7 +13,7 @@ def encode(string):
             break
     return encode_output
 
-def main():    # Endry Rodriguez
+def main():     # Endry Rodriguez
     while True:
         print('Menu')
         print('-------------')
