@@ -19,8 +19,8 @@ def main():     # Endry Rodriguez
 
 def encode(string):
     encode_output = ''
-    for x in range(0, len(string)):
-            x = str(int(string[x]) + 3) % 10
+    for num in string:
+            x = str(int(string[num]) + 3) % 10)
             encode_output += x
     return encode_output
 
