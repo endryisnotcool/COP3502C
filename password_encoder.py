@@ -1,18 +1,3 @@
-encode_output = None
-original_password = None
-encoded_password = None
-
-def encode(string):
-    global encode_output
-    encode_output = ''
-    for x in string[0:8]:
-        if int(x) <= 9:
-            x = chr(ord(x)+3)
-            encode_output += x
-        else:
-            break
-    return encode_output
-
 def main():     # Endry Rodriguez
     while True:
         print('Menu')
@@ -27,10 +12,24 @@ def main():     # Endry Rodriguez
             print('Your passsword has been encoded and stored!')
             continue
         elif menu_option == 2:
-            print(f'The encoded password is {encoded_password}, and the original password is {password}.')
+            print(f'The encoded password is {encode(password)}, and the original password is {decode(encoded_password)}.')
         elif menu_option == 3:
             break
         False
+
+def encode(string):
+    encode_output = ''
+    for x in string[0:8]:
+        if int(x) <= 20:
+            x = chr(ord(x)+3)
+            encode_output += x
+        else:
+            break
+    return encode_output
+
+def decode():
+    pass
+
 
 if __name__ == " __main__":
     main()
