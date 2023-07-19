@@ -19,12 +19,9 @@ def main():     # Endry Rodriguez
 
 def encode(string):
     encode_output = ''
-    for x in string[0:8]:
-        if int(x) <= 20:
-            x = chr(ord(x)+3)
-            encode_output += x
-        else:
-            break
+    for x in range(0, len(string)):
+            x = (int(string[x]) + 3) % 10
+            encode_output += str(x)
     return encode_output
 
 def decode():
