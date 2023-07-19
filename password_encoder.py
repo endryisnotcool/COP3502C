@@ -20,8 +20,8 @@ def main():     # Endry Rodriguez
 def encode(string):
     encode_output = ''
     for x in range(0, len(string)):
-            x = (int(string[x]) + 3) % 10
-            encode_output += str(x)
+            x = str(int(string[x]) + 3) % 10
+            encode_output += x
     return encode_output
 
 def decode():
