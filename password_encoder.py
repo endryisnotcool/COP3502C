@@ -20,7 +20,7 @@ def main():     # Endry Rodriguez
 def encode(string):
     encode_output = ''
     for num in string:
-            x = str(int(string[num]) + 3) % 10)
+            x = str((int(string[num]) + 3) % 10)
             encode_output += x
     return encode_output
 
